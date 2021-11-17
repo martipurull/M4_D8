@@ -1,0 +1,7 @@
+a {
+    text-decoration: none!important;
+}
+
+.nav-link.text-secondary:hover {
+    color: #ced6dd!important;
+}

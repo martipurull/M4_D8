@@ -1,27 +1,24 @@
 import React from "react";
 import { Component } from "react";
-import {
-  Container,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Dropdown,
-  DropdownButton,
-} from "react-bootstrap";
+import { Container, Nav, Navbar, NavDropdown, Dropdown, DropdownButton } from "react-bootstrap";
+import { Link } from 'react-router-dom'
 import "../App.css";
+import "../componentStyles/Navbar.css";
 
 class Navbarr extends Component {
   render() {
     return (
       <Navbar bg="" variant="dark" expand="lg">
         <Container fluid>
-          <img
-            src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
-            alt=""
-            width="150px"
-            height="70px"
-            class="pt-1 mt-1 mr-2 "
-          />
+          <Link to="/">
+            <img
+              src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
+              alt=""
+              width="150px"
+              height="70px"
+              class="pt-1 mt-1 mr-2 "
+            />
+          </Link>
           <Navbar.Toggle
             aria-controls="navbarScroll"
             className="navbarrtoggle"
@@ -32,32 +29,21 @@ class Navbarr extends Component {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <NavDropdown
-                title="Home"
-                id="navbarScrollingDropdown"
-                className="navbarr"
-              >
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link href="#action2" className="text-secondary">
-                TV Shows
-              </Nav.Link>
-              <Nav.Link href="#action3" className="text-secondary">
-                Movies
-              </Nav.Link>
-              <Nav.Link href="#action4" className="text-secondary">
-                Recently Added
-              </Nav.Link>
-              <Nav.Link href="#action5" className="text-secondary">
-                My List
-              </Nav.Link>
+              <Link to="/">
+                <span className="nav-link text-secondary">Home</span>
+              </Link>
+              <Link to="/tv-shows">
+                <span className="nav-link text-secondary">TV Shows</span>
+              </Link>
+              <Link to="/movies">
+                <span className="nav-link text-secondary">Movies</span>
+              </Link>
+              <Link to="/recently-added">
+                <span className="nav-link text-secondary">Recently Added</span>
+              </Link>
+              <Link to="/my-list">
+                <span className="nav-link text-secondary">My List</span>
+              </Link>
             </Nav>
           </Navbar.Collapse>
           <div class="right-icons row">

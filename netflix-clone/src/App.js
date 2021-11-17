@@ -1,30 +1,26 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import MoviesCarousel from "./components/MoviesCarousel";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import { Form, FormControl, Button } from "react-bootstrap";
-import { useState } from "react";
+import Home from './components/Home'
+import TVShows from './components/TVShows'
+import NotFound from "./components/NotFound";
+import MovieDetails from './components/MovieDetails'
 
 const App = () => {
-  const [query, setQuery] = useState("");
+
   return (
     <>
-      <Navbar />
-      <Form className="d-flex mr-3 w-100">
-        <FormControl
-          type="search"
-          placeholder="Search"
-          className="me-2"
-          aria-label="Search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-      </Form>
-      {query && <MoviesCarousel galleryTitle="Search" query={query} />}
-      <MoviesCarousel galleryTitle="Action" query="mission" />
-      <MoviesCarousel galleryTitle="Fantasy" query="harry" />
-      <MoviesCarousel galleryTitle="Drama" query="game of thrones" />
-      <Footer />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/tv-shows" element={<TVShows />} />
+          <Route path="/movie-details/:movieId" element={<MovieDetails />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 };

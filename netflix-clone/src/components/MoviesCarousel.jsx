@@ -9,6 +9,8 @@ import "../componentStyles/MoviesCarousel.css";
 import Error from "./Error";
 
 const MoviesCarousel = ({ galleryTitle, query }) => {
+
+  console.log(movies.Search)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [moviesJson, setMoviesJson] = useState({});
