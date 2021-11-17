@@ -7,10 +7,9 @@ import Container from "react-bootstrap/Container";
 import SingleMovie from "./SingleMovie";
 import "../componentStyles/MoviesCarousel.css";
 import Error from "./Error";
+import { Link } from 'react-router-dom'
 
 const MoviesCarousel = ({ galleryTitle, query }) => {
-
-  console.log(movies.Search)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
   const [moviesJson, setMoviesJson] = useState({});

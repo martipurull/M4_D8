@@ -10,3 +10,7 @@ body {
 h4 {
   font-weight: 700;
 }
+
+.nav-linkcarousel-link-no-style {
+  all: none!important;
+}
