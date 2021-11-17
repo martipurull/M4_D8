@@ -20,7 +20,7 @@ const MoviesCarousel = ({ galleryTitle, query }) => {
         setMoviesJson(resp);
         return resp;
       } catch (error) {
-        setError(error);
+        setError(true);
       } finally {
         setLoading(false);
       }
