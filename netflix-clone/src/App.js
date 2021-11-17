@@ -21,7 +21,7 @@ const App = () => {
         />
       </Form>
       {query && <MoviesCarousel galleryTitle="Search" query={query} />}
-      <MoviesCarousel galleryTitle="Action" query="mission impossible" />
+      <MoviesCarousel galleryTitle="Action" query="mission" />
       <MoviesCarousel galleryTitle="Fantasy" query="harry" />
       <MoviesCarousel galleryTitle="Drama" query="game of thrones" />
       <Footer />
