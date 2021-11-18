@@ -42,7 +42,7 @@ class Navbarr extends Component {
                 <span className="nav-link text-secondary">Recently Added</span>
               </Link>
               <Link to="/my-list">
-                <span className="nav-link text-secondary">My List</span>
+                <span className="nav-link text-secondary">Registration</span>
               </Link>
             </Nav>
           </Navbar.Collapse>
