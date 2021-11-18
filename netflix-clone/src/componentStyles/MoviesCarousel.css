@@ -14,3 +14,13 @@ h4 {
 .nav-linkcarousel-link-no-style {
   all: none!important;
 }
+
+.carousel-control-prev-icon {
+  position: absolute;
+  left: -20%;
+}
+
+.carousel-control-next-icon {
+  position: absolute;
+  left: 120%;
+}

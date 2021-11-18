@@ -30,18 +30,16 @@ const MovieDetails = () => {
 
     useEffect(() => {
         let movieId = params.movieId
-        let movieToShow = fetchMovieDetails(movieId)
+        let movieToShow = fetchMovieDetails(movieId).then((fetchedMovie) => setMovie(fetchedMovie))
         // console.log(movieId)
-        setMovie(movieToShow)
-        console.log(movieToShow)
     }, [])
 
     return (
         <Container>
             <Row>
                 <Col className="movie-poster col-6 col-md-3 col-lg-2">
-                    {/* <img src={movie.Poster} alt={movie.Title + "poster image"} />
-                    <h2>{movie.Title}</h2> */}
+                    <img src={movie.Poster} alt={movie.Title + "poster image"} />
+                    <h2>{movie.Title}</h2>
                 </Col>
             </Row>
         </Container>
